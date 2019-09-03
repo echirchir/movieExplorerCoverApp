@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Movie Explorer</string>
+    <string name="action_settings">Settings</string>
+    <string name="no_movies_found">There are currently no movies to view. Pull to refresh the list</string>
+    <string name="search">Search</string>
+    <string name="movie_title">The Rise of the Apes</string>
+    <string name="movie_genre">Genre: Fiction</string>
+</resources>
