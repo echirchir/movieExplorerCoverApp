@@ -41,6 +41,13 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
 
+/*
+* The Main activity that displays MOVIES
+* Enables Search functionality
+* 4th September, 2019
+* @author Elisha Chirchir
+* */
+
 public class MoviesActivity extends AppCompatActivity implements SearchView.OnQueryTextListener {
 
     @BindView(R.id.swipeContainer)
@@ -107,6 +114,10 @@ public class MoviesActivity extends AppCompatActivity implements SearchView.OnQu
 
     }
 
+    /*
+    * Async operation to avoid overworking
+    * The Main Thread; runs in the background
+    * */
     public class RefreshMoviesAsync extends AsyncTask<String, Void, String> {
 
         @Override
@@ -128,6 +139,9 @@ public class MoviesActivity extends AppCompatActivity implements SearchView.OnQu
         }
     }
 
+    /*
+    * Makes the HTTP GET request to fetch the movies;
+    * */
     public void doHttpRequest() {
 
         OkHttpClient client = new OkHttpClient();
@@ -215,6 +229,11 @@ public class MoviesActivity extends AppCompatActivity implements SearchView.OnQu
         });
     }
 
+    /*
+    * Read movies from the Movie table
+    *  and populates the adapter
+    *
+    * */
     private void queryMovies(){
 
         RealmResults<com.eli.movieexplorer.db.Movie> existingMovies = realm.where(com.eli.movieexplorer.db.Movie.class).findAll().sort("movie_id", Sort.ASCENDING);
