@@ -17,6 +17,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
+import com.eli.movieexplorer.adapters.MovieAdapter;
 import com.eli.movieexplorer.helpers.NetworkChecker;
 import com.eli.movieexplorer.helpers.UTILITIES;
 import com.eli.movieexplorer.pojos.Movie;

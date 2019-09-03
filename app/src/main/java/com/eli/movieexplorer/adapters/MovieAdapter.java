@@ -1,4 +1,4 @@
-package com.eli.movieexplorer;
+package com.eli.movieexplorer.adapters;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.eli.movieexplorer.R;
 import com.eli.movieexplorer.model.Movie;
 
 import org.jetbrains.annotations.NotNull;
